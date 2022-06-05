@@ -30,21 +30,16 @@ class ProductController extends Controller
 
     public function index()
     {
-        // $test = Product::all();
-
-        // dd($test);
-
         return Inertia::render('Index', [
             'products'  => Product::where('active', true)->get()->map(function ($product) {
                 return [
+                    'id'    => $product->id,
                     'title' => $product->title,
                     'image' => $product->image,
                     'description'   => $product->description,
-
+                    'price' => $product->unit_price,
                 ];
             }),
         ]);
-
-        // return 'heyyy';
     }
 }

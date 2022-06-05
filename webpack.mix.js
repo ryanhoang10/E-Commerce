@@ -24,4 +24,7 @@ mix.js('resources/js/test_app.js', 'public/js')
 
 mix.js('resources/js/products.js', 'public/js')
     .vue()
-    .version();
+    .version()
+    .postCss("resources/css/app.css", "public/css", [
+        require("tailwindcss"),
+      ]);
