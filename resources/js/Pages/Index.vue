@@ -3,7 +3,7 @@
     
     <div class="flex">
         <div class="flex-auto w-32">
-            <Filter />
+            <Filter :categories=categories />
         </div>
         <div class="flex-auto">
             <div class="flex justify-around p-4">
@@ -34,7 +34,8 @@ import Filter from '../Shared/Filter.vue';
 
 export default {
     props: {
-        products: Array
+        products: Array,
+        categories: Array,
     },
     components: {
         Header,
