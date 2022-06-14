@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <div class="mb-3">
         <div @click="toggle()">
             <button>{{ filterCat }}</button>
         </div>

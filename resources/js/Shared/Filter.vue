@@ -8,19 +8,19 @@
         />
 
         <FilterList 
-            :filterLists=categories 
+            :filterLists=brands 
             filterCat="Brand" 
             :showSection="true" 
         />
 
         <FilterList 
-            :filterLists=categories 
+            :filterLists=sizes 
             filterCat="Size" 
             :showSection="true" 
         />
 
         <FilterList 
-            :filterLists=categories 
+            :filterLists=colors 
             filterCat="Color" 
             :showSection="true" 
         />
@@ -35,7 +35,10 @@ export default {
     data() {
     },
     props: {
-        categories: Array
+        categories: Array,
+        brands: Array,
+        colors: Array,
+        sizes: Array,
     },
     components: {
         FilterList

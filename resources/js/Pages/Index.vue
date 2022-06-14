@@ -3,7 +3,12 @@
     
     <div class="flex">
         <div class="flex-auto w-32">
-            <Filter :categories=categories />
+            <Filter 
+                :categories=categories_filter 
+                :brands=brands_filter 
+                :sizes=sizes_filter
+                :colors=colors_filter
+            />
         </div>
         <div class="flex-auto">
             <div class="flex justify-around p-4">
@@ -35,7 +40,10 @@ import Filter from '../Shared/Filter.vue';
 export default {
     props: {
         products: Array,
-        categories: Array,
+        categories_filter: Array,
+        brands_filter: Array,
+        colors_filter: Array,
+        sizes_filter: Array
     },
     components: {
         Header,

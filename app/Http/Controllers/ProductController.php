@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Quantity;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Inertia\Inertia;
@@ -32,10 +33,28 @@ class ProductController extends Controller
     public function index()
     {
         return Inertia::render('Index', [
-            'categories' => Category::get()->map(function($category) {
+            'brands_filter' => Product::select('brand')->distinct()->get()->map(function($brand) {
+                return [
+                    'id' => $brand->brand,
+                    'category_name' => $brand->brand,
+                ];
+            }),
+            'categories_filter' => Category::get()->map(function($category) {
                 return [
                     'id'    => $category->id,
                     'category_name' => $category->category_name,
+                ];
+            }),
+            'sizes_filter' => Quantity::select('size')->distinct()->get()->map(function($size) {
+                return [
+                    'id'    => $size->size,
+                    'category_name' => $size->size
+                ];
+            }),
+            'colors_filter' => Quantity::select('color')->distinct()->get()->map(function($color) {
+                return [
+                    'id'    => $color->color,
+                    'category_name' => $color->color
                 ];
             }),
             'products'  => Product::where('active', true)->get()->map(function ($product) {

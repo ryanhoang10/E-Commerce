@@ -20325,7 +20325,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     products: Array,
-    categories: Array
+    categories_filter: Array,
+    brands_filter: Array,
+    colors_filter: Array,
+    sizes_filter: Array
   },
   components: {
     Header: _Shared_Header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -20427,7 +20430,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {},
   props: {
-    categories: Array
+    categories: Array,
+    brands: Array,
+    colors: Array,
+    sizes: Array
   },
   components: {
     FilterList: _Shared_FilterList_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -20569,10 +20575,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Sort = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Sort");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Header), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Filter, {
-    categories: $props.categories
+    categories: $props.categories_filter,
+    brands: $props.brands_filter,
+    sizes: $props.sizes_filter,
+    colors: $props.colors_filter
   }, null, 8
   /* PROPS */
-  , ["categories"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Breadcrumbs dummy "), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Sort)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.products, function (product) {
+  , ["categories", "brands", "sizes", "colors"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Breadcrumbs dummy "), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Sort)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.products, function (product) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: product.id
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -20709,19 +20718,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8
   /* PROPS */
   , ["filterLists"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_FilterList, {
-    filterLists: $props.categories,
+    filterLists: $props.brands,
     filterCat: "Brand",
     showSection: true
   }, null, 8
   /* PROPS */
   , ["filterLists"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_FilterList, {
-    filterLists: $props.categories,
+    filterLists: $props.sizes,
     filterCat: "Size",
     showSection: true
   }, null, 8
   /* PROPS */
   , ["filterLists"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_FilterList, {
-    filterLists: $props.categories,
+    filterLists: $props.colors,
     filterCat: "Color",
     showSection: true
   }, null, 8
@@ -20744,8 +20753,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "mb-3"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $options.toggle();
     })
