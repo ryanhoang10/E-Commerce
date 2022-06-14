@@ -1,6 +1,6 @@
 <template>
 
-    <div class="mb-3">
+    <div class="mb-3 ml-4 border-t-2">
         <div @click="toggle()">
             <button>{{ filterCat }}</button>
         </div>
@@ -10,7 +10,7 @@
                 <li 
                     v-for="filterItem in filterLists"
                     :key="filterItem.id"
-                    class="text-sm"
+                    class="text-xs mb-1"
                 >
                     {{ filterItem.category_name }}
                 </li>

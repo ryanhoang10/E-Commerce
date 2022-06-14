@@ -1,5 +1,5 @@
 <template>
-    <div class="w-64">
+    <div class="w-32">
   
         <FilterList 
             :filterLists=categories 

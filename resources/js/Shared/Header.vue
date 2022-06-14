@@ -1,18 +1,16 @@
 <template>
-    <div class="flex justify-between">
-        <nav>
-            <div class="flex">
-                <div>
-                    <img class="w-3/12" src="/images/logo/logo.png" alt="Logo Image">
-                </div>
-                <ul class="inline-flex	">
-                    <li class=""><Link href="#">Sign Up</Link></li>
-                    <li><Link href="#">Favorite</Link></li>
-                    <li><Link href="#">Shopping Cart</Link></li>
-                </ul>   
+    <nav>
+        <div class="flex justify-between">
+            <div>
+                <img class="w-3/12" src="/images/logo/logo.png" alt="Logo Image">
             </div>
-        </nav>
-    </div>
+            <ul class="inline-flex text-sm pl-4 pt-4">
+                <li class="mx-2"><Link href="#">Sign Up</Link></li>
+                <li class="mx-2"><Link href="#">Favorite</Link></li>
+                <li class="mx-2"><Link href="#">Shopping Cart</Link></li>
+            </ul>   
+        </div>
+    </nav>
 </template>
 
 <script>
