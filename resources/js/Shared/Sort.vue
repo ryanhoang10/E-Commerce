@@ -2,9 +2,10 @@
     <div>
         <label for="sort_by">Sort By: </label>
         <select name="sort_by" id="sort">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+            <option value="">Recommended</option>
+            <option value="newest">Newest</option>
+            <option value="phl">Price (High to low)</option>
+            <option value="plh">Price (Low to High)</option>
         </select>
     </div>
 </template>

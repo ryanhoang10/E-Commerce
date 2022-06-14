@@ -1,6 +1,6 @@
 <template>
     <div class="w-64">
-        testing
+        Filter
     </div>
 </template>
 
