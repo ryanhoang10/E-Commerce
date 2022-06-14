@@ -1,70 +1,44 @@
 <template>
     <div class="w-64">
-        <div @click="toggle()">
-            <button>Category</button>
-        </div>
+  
+        <FilterList 
+            :filterLists=categories 
+            filterCat="Category" 
+            :showSection="true" 
+        />
 
-        <div v-show="showCategory">
-            <ul>
-                <li 
-                    v-for="category in categories"
-                    :key="category.id"
-                    class="text-sm"
-                >
-                    {{ category.category_name }}
-                </li>
-            </ul>        
-        </div>
+        <FilterList 
+            :filterLists=categories 
+            filterCat="Brand" 
+            :showSection="true" 
+        />
 
-        <div>
-            <button>Brand</button>
-        </div>
+        <FilterList 
+            :filterLists=categories 
+            filterCat="Size" 
+            :showSection="true" 
+        />
 
-        <div>
-            <ul>
-                <li>Fake Brand</li>
-            </ul>
-        </div>
-
-        <div>
-            <button>Size</button>
-        </div>
-
-        <div>
-            <ul>
-                <li>Size</li>
-            </ul>
-        </div>
-
-        <div>
-            <button>Color</button>
-        </div>
-
-        <div>
-            <ul>
-                <li>Color</li>
-            </ul>
-        </div>
+        <FilterList 
+            :filterLists=categories 
+            filterCat="Color" 
+            :showSection="true" 
+        />
 
     </div>
 </template>
 
 <script>
+import FilterList from '../Shared/FilterList.vue';
+
 export default {
     data() {
-        return {
-            showCategory: true,
-            showSize: true,
-            showBrand: true,
-        }
     },
     props: {
         categories: Array
     },
-    methods: {
-        toggle() {
-            return this.showCategory = !this.showCategory;
-        }
+    components: {
+        FilterList
     }
 }
 </script>
