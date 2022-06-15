@@ -20552,7 +20552,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_3 = {
-  "class": "flex"
+  "class": "flex ml-2"
 };
 var _hoisted_4 = {
   "class": "flex-auto w-32"
@@ -20766,7 +20766,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.filterLists, function (filterItem) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
       key: filterItem.id,
-      "class": "text-xs mb-1"
+      "class": "text-xs mb-1 mt-1 cursor-pointer hover:text-sky-600"
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(filterItem.category_name), 1
     /* TEXT */
     );

@@ -5,7 +5,7 @@
         <h6>Men's Streetwear</h6>
         <Sort />    
     </div>
-    <div class="flex">
+    <div class="flex ml-2">
         <div class="flex-auto w-32">
             <Filter 
                 :categories=categories_filter 
