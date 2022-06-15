@@ -1,6 +1,10 @@
 <template>
     <Header />
-    
+    <div class="flex justify-around p-4">
+    <!-- Breadcrumbs dummy -->
+        <h6>Men's Streetwear</h6>
+        <Sort />    
+    </div>
     <div class="flex">
         <div class="flex-auto w-32">
             <Filter 
@@ -11,11 +15,6 @@
             />
         </div>
         <div class="flex-auto">
-            <div class="flex justify-around p-4">
-            <!-- Breadcrumbs dummy -->
-                <h6>Men's Streetwear</h6>
-                <Sort />    
-            </div>
             <div class="grid grid-cols-4 gap-2 px-4">
                 <div 
                     v-for="product in products"
