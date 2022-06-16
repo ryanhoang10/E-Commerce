@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="text-sm">
         <label for="sort_by">Sort By: </label>
         <select name="sort_by" id="sort">
             <option value="">Recommended</option>

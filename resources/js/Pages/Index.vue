@@ -1,7 +1,8 @@
 <template>
     <Header />
-    <!-- <Nav /> -->
-
+    <div class="mt-2">
+        <img src="/images/summer-home-banner.jpeg" alt="Summer Banner">
+    </div>
 </template>
 
 <script>
