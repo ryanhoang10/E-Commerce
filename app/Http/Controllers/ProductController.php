@@ -32,7 +32,7 @@ class ProductController extends Controller
 
     public function index()
     {
-        return Inertia::render('Index', [
+        return Inertia::render('Product', [
             'brands_filter' => Product::select('brand')->distinct()->get()->map(function($brand) {
                 return [
                     'id' => $brand->brand,

@@ -10,7 +10,7 @@
                 <li 
                     v-for="filterItem in filterLists"
                     :key="filterItem.id"
-                    class="text-xs mb-1 mt-1 cursor-pointer hover:text-sky-600	"
+                    class="text-xs my-2 cursor-pointer hover:text-sky-600	"
                 >
                     {{ filterItem.category_name }}
                 </li>

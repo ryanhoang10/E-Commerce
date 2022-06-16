@@ -1,40 +1,12 @@
 <template>
     <Header />
-    <div class="flex justify-around p-4">
-    <!-- Breadcrumbs dummy -->
-        <h6>Men's Streetwear</h6>
-        <Sort />    
-    </div>
-    <div class="flex ml-2">
-        <div class="flex-auto w-32">
-            <Filter 
-                :categories=categories_filter 
-                :brands=brands_filter 
-                :sizes=sizes_filter
-                :colors=colors_filter
-            />
-        </div>
-        <div class="flex-auto">
-            <div class="grid grid-cols-4 gap-2 px-4">
-                <div 
-                    v-for="product in products"
-                    :key="product.id"
-                >
-                    <div>
-                        <img class="" :src="'/images/' + product.image" alt="product.description"> 
-                        <h3 class="text-xs">{{ product.title }}</h3>     
-                    </div>
-                </div>    
-            </div>                
-        </div>
-    </div>
+    <Nav />
 
 </template>
 
 <script>
 import Header from '../Shared/Header.vue';
-import Sort from '../Shared/Sort.vue';
-import Filter from '../Shared/Filter.vue';
+import Nav from '../Shared/Nav.vue';
 
 export default {
     props: {
@@ -46,8 +18,7 @@ export default {
     },
     components: {
         Header,
-        Sort,
-        Filter
+        Nav,
     }
 }
 </script>

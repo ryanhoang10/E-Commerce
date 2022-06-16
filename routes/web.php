@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
@@ -21,7 +22,8 @@ use Inertia\Inertia;
 // });
 
 // Route::get('/users/{user}', [UserController::class, 'show']);
-Route::get('/', [ProductController::class, 'index']);
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 
 
 // Route::get('/', function () {

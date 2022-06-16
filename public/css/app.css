@@ -461,6 +461,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -485,8 +489,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-2 {
   margin-left: 0.5rem;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
 .block {
   display: block;
+}
+.inline {
+  display: inline;
 }
 .flex {
   display: flex;
@@ -527,6 +540,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-t-2 {
   border-top-width: 2px;
 }
+.border-sky-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(14 165 233 / var(--tw-border-opacity));
+}
 .p-4 {
   padding: 1rem;
 }
@@ -550,6 +567,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.hover\:border-b-2:hover {
+  border-bottom-width: 2px;
 }
 .hover\:text-sky-600:hover {
   --tw-text-opacity: 1;

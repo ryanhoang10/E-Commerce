@@ -1,10 +1,14 @@
 <template>
     <nav>
-        <ul>
-            <li><Link href="/test">Home</Link></li>
-            <li><Link href="/test/settings">Settings</Link></li>
-            <li><Link href="/test/users">Users</Link></li>
-            <li><Link href="/test/logout" method="post" as="button">Logout</Link></li>
+        <ul class="flex justify-around text-sm border-t-2 pt-4">
+            <li class="hover:border-b-2 border-sky-500"><Link href="/products">Mens</Link></li>
+            <li class="hover:border-b-2 border-sky-500"><Link href="#">Shoes</Link></li>
+            <li class="hover:border-b-2 border-sky-500"><Link href="#">Backpacks</Link></li>
+            <li class="hover:border-b-2 border-sky-500"><Link href="#">Brands</Link></li>
+            <li class="hover:border-b-2 border-sky-500"><Link href="#">Pokemon</Link></li>
+            <li class="hover:border-b-2 border-sky-500"><Link href="#">Yu-Gi-Oh</Link></li>
+            <li class="hover:border-b-2 border-sky-500"><Link href="#">Skates</Link></li>
+            <li class="hover:border-b-2 border-sky-500"><Link href="#">Sale</Link></li>
         </ul>
     </nav>
 </template>

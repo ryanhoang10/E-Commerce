@@ -16,7 +16,7 @@
         <FilterList 
             :filterLists=sizes 
             filterCat="Size" 
-            :showSection="true" 
+            :showSection="true"
         />
 
         <FilterList 
