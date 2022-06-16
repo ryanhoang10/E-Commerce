@@ -11,13 +11,17 @@
             </ul>   
         </div>
     </nav>
+    <Nav />
 </template>
 
 <script>
 import { Link } from '@inertiajs/inertia-vue3';
+import Nav from './Nav.vue';
+
 export default {
     components: {
-        Link
+        Link,
+        Nav,
     }   
 }
 </script>

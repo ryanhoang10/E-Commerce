@@ -540,9 +540,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-t-2 {
   border-top-width: 2px;
 }
+.border-b-2 {
+  border-bottom-width: 2px;
+}
 .border-sky-500 {
   --tw-border-opacity: 1;
   border-color: rgb(14 165 233 / var(--tw-border-opacity));
+}
+.border-sky-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(224 242 254 / var(--tw-border-opacity));
+}
+.border-transparent {
+  border-color: transparent;
 }
 .p-4 {
   padding: 1rem;
@@ -568,8 +578,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
+.hover\:border-2:hover {
+  border-width: 2px;
+}
 .hover\:border-b-2:hover {
   border-bottom-width: 2px;
+}
+.hover\:border-sky-500:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(14 165 233 / var(--tw-border-opacity));
+}
+.hover\:border-b-sky-500:hover {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(14 165 233 / var(--tw-border-opacity));
+}
+.hover\:border-b-orange-800:hover {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(154 52 18 / var(--tw-border-opacity));
 }
 .hover\:text-sky-600:hover {
   --tw-text-opacity: 1;

@@ -1,12 +1,12 @@
 <template>
     <Header />
-    <Nav />
+    <!-- <Nav /> -->
 
 </template>
 
 <script>
 import Header from '../Shared/Header.vue';
-import Nav from '../Shared/Nav.vue';
+// import Nav from '../Shared/Nav.vue';
 
 export default {
     props: {
@@ -18,7 +18,6 @@ export default {
     },
     components: {
         Header,
-        Nav,
     }
 }
 </script>
