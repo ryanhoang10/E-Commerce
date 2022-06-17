@@ -1,9 +1,8 @@
 <template>
     <nav>
         <div class="flex justify-between">
-            <div>
-                <Link href="/"><img class="w-3/12" src="/images/logo/logo.png" alt="Logo Image"></Link>
-            </div>
+            <Link href="/"><img class="pt-1 w-1/2" src="/images/logo/logo2.png" alt="Logo Image"></Link>
+
             <search-bar />
             <ul class="inline-flex text-sm pl-4 pt-4">
                 <li class="mx-2"><Link href="#">Sign Up</Link></li>
@@ -18,7 +17,7 @@
 <script>
 import { Link } from '@inertiajs/inertia-vue3';
 import Nav from './Nav.vue';
-import SearchBar from './Learnings/SearchBar.vue';
+import SearchBar from './SearchBar.vue';
 
 
 export default {

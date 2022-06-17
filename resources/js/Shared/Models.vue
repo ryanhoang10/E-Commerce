@@ -4,10 +4,10 @@
             <img class="w-11/12" src="/images/model/model_one.png" alt="">
         </div>
         <div class="flex justify-center">
-            <img class="w-11/12" src="/images/model/model_one.png" alt="">
+            <img class="w-11/12" src="/images/model/model_two.png" alt="">
         </div>
         <div class="flex justify-center">
-            <img class="w-11/12" src="/images/model/model_one.png" alt="">
+            <img class="w-11/12" src="/images/model/model_three.png" alt="">
         </div>
      </div>
 </template>
