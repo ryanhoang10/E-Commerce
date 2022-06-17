@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        search bar baby
     </div>
 </template>
 

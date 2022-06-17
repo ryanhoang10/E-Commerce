@@ -1,25 +1,25 @@
 <template>
     <div class="w-32">
   
-        <FilterList 
+        <filter-list 
             :filterLists=categories 
             filterCat="Category" 
             :showSection="true" 
         />
 
-        <FilterList 
+        <filter-list 
             :filterLists=brands 
             filterCat="Brand" 
             :showSection="true" 
         />
 
-        <FilterList 
+        <filter-list 
             :filterLists=sizes 
             filterCat="Size" 
             :showSection="true"
         />
 
-        <FilterList 
+        <filter-list 
             :filterLists=colors 
             filterCat="Color" 
             :showSection="true" 
@@ -32,8 +32,6 @@
 import FilterList from '../Shared/FilterList.vue';
 
 export default {
-    data() {
-    },
     props: {
         categories: Array,
         brands: Array,
