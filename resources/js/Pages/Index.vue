@@ -3,14 +3,21 @@
     <div class="mt-2">
         <img src="/images/summer-home-banner.jpeg" alt="Summer Banner">
     </div>
-    <div>
-        <Trending />
-    </div>
+    
+    <ModelExample />
+
+    <Trending />
+
+    <ModelExample />
+
+    <Footer />
 </template>
 
 <script>
+import Footer from '../Shared/Footer.vue';
 import Header from '../Shared/Header.vue';
 import Trending from '../Shared/Trending.vue';
+import ModelExample from '../Shared/Models.vue';
 
 export default {
     props: {
@@ -23,6 +30,8 @@ export default {
     components: {
         Header,
         Trending,
+        Footer,
+        ModelExample,
     }
 }
 </script>

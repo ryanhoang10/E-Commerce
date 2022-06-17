@@ -29,12 +29,15 @@
         </div>
     </div>
 
+    <Footer />
+
 </template>
 
 <script>
 import Header from '../Shared/Header.vue';
 import Sort from '../Shared/Sort.vue';
 import Filter from '../Shared/Filter.vue';
+import Footer from '../Shared/Footer.vue';
 
 export default {
     props: {
@@ -47,7 +50,8 @@ export default {
     components: {
         Header,
         Sort,
-        Filter
+        Filter,
+        Footer,
     }
 }
 </script>
