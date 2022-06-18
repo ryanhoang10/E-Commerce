@@ -20997,7 +20997,7 @@ var _hoisted_1 = {
   "class": "flex justify-between mt-4 bg-zinc-100 pt-2 border-t-2 border-black-100"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><h4>For You</h4><ul class=\"text-sm mb-2 mt-2\"><li>Favorites</li><li>Blog</li></ul></div><div><h4>Gues Services</h4><ul class=\"text-sm mb-2 mt-2\"><li>Order Status</li><li>Returns &amp; Exchanges</li><li>Contact Us</li></ul></div><div><h4>Company</h4><ul class=\"text-sm mb-2 mt-2\"><li>About Us</li></ul></div><div><h4>Sign Up for Email</h4><input class=\"appearance-none border rounded w-full text-gray-700\" type=\"email address\" name=\"\" id=\"\"></div><div><h4>Connect With Me</h4><ul class=\"text-sm mb-2 mt-2\"><li>snapchat</li></ul></div>", 5);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><h4>For You</h4><ul class=\"text-sm mb-2 mt-2\"><li>Favorites</li><li>Blog</li></ul></div><div><h4>Gues Services</h4><ul class=\"text-sm mb-2 mt-2\"><li>Order Status</li><li>Returns &amp; Exchanges</li><li>Contact Us</li></ul></div><div><h4>Company</h4><ul class=\"text-sm mb-2 mt-2\"><li>About Us</li></ul></div><div><h4>Sign Up for Email</h4><input class=\"appearance-none border text-gray-700\" type=\"email address\" name=\"\" id=\"\" placeholder=\"Email Address\"></div><div><h4>Connect With Me</h4><ul class=\"text-sm mb-2 mt-2\"><li>snapchat</li></ul></div>", 5);
 
 var _hoisted_7 = [_hoisted_2];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -21187,7 +21187,7 @@ var _hoisted_1 = {
   "class": "flex justify-between mt-4 mb-4 ml-2 mr-2"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex justify-center\"><img class=\"w-11/12\" src=\"/images/model/model_one.png\" alt=\"\"></div><div class=\"flex justify-center\"><img class=\"w-11/12\" src=\"/images/model/model_two.png\" alt=\"\"></div><div class=\"flex justify-center\"><img class=\"w-11/12\" src=\"/images/model/model_three.png\" alt=\"\"></div>", 3);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><div class=\"flex justify-center\"><img class=\"w-11/12\" src=\"/images/model/model_one.png\" alt=\"\"></div><!-- &lt;span class=&quot;text-xs&quot;&gt;Dive in to Men&#39;s Pants&lt;/span&gt;             --></div><div class=\"flex justify-center\"><img class=\"w-11/12\" src=\"/images/model/model_two.png\" alt=\"\"></div><div class=\"flex justify-center\"><img class=\"w-11/12\" src=\"/images/model/model_three.png\" alt=\"\"></div>", 3);
 
 var _hoisted_5 = [_hoisted_2];
 function render(_ctx, _cache, $props, $setup, $data, $options) {

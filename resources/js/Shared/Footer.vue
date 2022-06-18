@@ -26,7 +26,7 @@
 
         <div>
             <h4>Sign Up for Email</h4>
-            <input class="appearance-none border rounded w-full text-gray-700" type="email address" name="" id="">
+            <input class="appearance-none border text-gray-700" type="email address" name="" id="" placeholder="Email Address">
         </div>
 
         <div>
