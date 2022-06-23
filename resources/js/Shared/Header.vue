@@ -5,7 +5,7 @@
 
             <search-bar />
             <ul class="inline-flex text-sm pl-4 pt-4">
-                <li class="mx-2"><Link href="#">Sign Up</Link></li>
+                <li class="mx-2"><Link href="/signup">Sign Up</Link></li>
                 <li class="mx-2"><Link href="#">Favorite</Link></li>
                 <li class="mx-2"><Link href="#">Shopping Cart</Link></li>
             </ul>   

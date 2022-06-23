@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
-use App\Models\Product;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -24,6 +24,7 @@ use Inertia\Inertia;
 // Route::get('/users/{user}', [UserController::class, 'show']);
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/signup', [UserController::class, 'index']);
 
 
 // Route::get('/', function () {

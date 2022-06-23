@@ -2,7 +2,7 @@
 
     <div class="mb-3 ml-4 border-t-2">
         <div @click="toggle()">
-            <button>{{ filterCat }}</button>
+            <button dusk="filter-cat">{{ filterCat }}</button>
         </div>
 
         <div v-show="show">
