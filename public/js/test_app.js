@@ -20467,12 +20467,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
 /* harmony import */ var _Shared_Header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/Header.vue */ "./resources/js/Shared/Header.vue");
+/* harmony import */ var _Shared_Nav_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Shared/Nav.vue */ "./resources/js/Shared/Nav.vue");
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     Header: _Shared_Header_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Link
+    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Link,
+    Nav: _Shared_Nav_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 });
 
@@ -20939,7 +20942,7 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<form action=\"post\" class=\"w-full max-w-sm\"><div class=\"flex items-center mb-6\"><div class=\"w-1/3\"><input type=\"text\" placeholder=\"Username\"></div><div class=\"w-2/3\"><input type=\"text\" placeholder=\"Email\"></div><div class=\"w-1/3\"><input type=\"password\" placeholder=\"Password\"></div><div class=\"w-2/3\"><input type=\"password\" placeholder=\"Retype Password\"></div></div></form>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<form action=\"post\" class=\"rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6\"><div class=\"\"><div class=\"mb-6\"><input type=\"text\" placeholder=\"Username\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"text\" placeholder=\"Email\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"password\" placeholder=\"Password\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"password\" placeholder=\"Retype Password\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"text\" placeholder=\"Address 1\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"text\" placeholder=\"Address 2\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"text\" placeholder=\"City\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"text\" placeholder=\"State\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"text\" placeholder=\"Zipcode\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\"></div><!-- &lt;div class=&quot;mb-6&quot;&gt;\n                    &lt;input type=&quot;text&quot; placeholder=&quot;Address 2&quot; class=&quot;rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5&quot;&gt;                    \n                &lt;/div&gt; --></div><div class=\"pt-3 flex justify-end\"><button class=\"mr-3\">Sign In</button><button class=\"mr-3\">Next</button></div></form>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
