@@ -486,6 +486,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-6 {
   margin-bottom: 1.5rem;
 }
+.mr-3 {
+  margin-right: 0.75rem;
+}
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -507,9 +510,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-3 {
   margin-top: 0.75rem;
 }
-.mr-3 {
-  margin-right: 0.75rem;
-}
 .block {
   display: block;
 }
@@ -527,12 +527,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-full {
   width: 100%;
-}
-.w-1\/3 {
-  width: 33.333333%;
-}
-.w-2\/3 {
-  width: 66.666667%;
 }
 .w-1\/2 {
   width: 50%;
@@ -557,9 +551,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-.items-center {
-  align-items: center;
-}
 .justify-end {
   justify-content: flex-end;
 }
@@ -578,8 +569,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-2 {
   gap: 0.5rem;
 }
-.rounded-full {
-  border-radius: 9999px;
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 .rounded-none {
   border-radius: 0px;
@@ -587,12 +578,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .rounded-lg {
   border-radius: 0.5rem;
 }
-.rounded-sm {
-  border-radius: 0.125rem;
-}
-.rounded-r-lg {
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+.rounded-full {
+  border-radius: 9999px;
 }
 .border {
   border-width: 1px;
@@ -606,6 +593,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-b-2 {
   border-bottom-width: 2px;
 }
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
 .border-transparent {
   border-color: transparent;
 }
@@ -613,42 +604,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(56 189 248 / var(--tw-border-opacity));
 }
-.border-gray-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
-}
-.bg-zinc-100 {
+.bg-zinc-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(244 244 245 / var(--tw-bg-opacity));
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
 }
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-.bg-zinc-700 {
+.bg-zinc-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(63 63 70 / var(--tw-bg-opacity));
-}
-.bg-zinc-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(113 113 122 / var(--tw-bg-opacity));
-}
-.bg-zinc-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(212 212 216 / var(--tw-bg-opacity));
-}
-.bg-zinc-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
+  background-color: rgb(244 244 245 / var(--tw-bg-opacity));
 }
 .p-4 {
   padding: 1rem;
-}
-.p-2\.5 {
-  padding: 0.625rem;
-}
-.p-2 {
-  padding: 0.5rem;
 }
 .p-1\.5 {
   padding: 0.375rem;
@@ -664,20 +633,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
-.pt-2 {
-  padding-top: 0.5rem;
-}
-.pt-1 {
-  padding-top: 0.25rem;
-}
-.pl-4 {
-  padding-left: 1rem;
-}
 .pt-4 {
   padding-top: 1rem;
-}
-.pr-2 {
-  padding-right: 0.5rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
@@ -687,6 +644,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-3 {
   padding-top: 0.75rem;
+}
+.pt-2 {
+  padding-top: 0.5rem;
+}
+.pt-1 {
+  padding-top: 0.25rem;
+}
+.pl-4 {
+  padding-left: 1rem;
+}
+.pr-2 {
+  padding-right: 0.5rem;
 }
 .text-center {
   text-align: center;
@@ -699,13 +668,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);

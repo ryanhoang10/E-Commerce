@@ -7,14 +7,14 @@ use Inertia\Inertia;
 
 class UserController extends Controller
 {
-    public function register(Request $request)
+    public function store(Request $request)
     {
     
     }
 
     public function login(Request $request)
     {
-    
+        
     }
 
     public function index()

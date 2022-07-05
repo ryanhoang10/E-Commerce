@@ -1,7 +1,6 @@
 <template>
     <div>
-        <Header />
-
+        <span @click="$emit('hideModal')">x</span>
         <!-- <Link href="/"><img class="mx-auto " src="/images/logo/logo2.png" alt="Logo Image"></Link> -->
         <div class="flex justify-between pt-4">
             <form action="post" class="rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6">
@@ -72,15 +71,15 @@
 </template>
 
 <script>
-import { Link } from '@inertiajs/inertia-vue3';
-import Header from '../Shared/Header.vue';
-import Nav from '../Shared/Nav.vue';
+// import { Link } from '@inertiajs/inertia-vue3';
+// import Header from '../Shared/Header.vue';
+// import Nav from '../Shared/Nav.vue';
 
 export default {
-    components: {
-        Header,
-        Link,
-        Nav
-    }
+    // components: {
+    //     Header,
+    //     Link,
+    //     Nav
+    // }
 }
 </script>

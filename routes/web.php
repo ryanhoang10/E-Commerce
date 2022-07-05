@@ -17,15 +17,12 @@ use Inertia\Inertia;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/users/{user}', [UserController::class, 'show']);
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/signup', [UserController::class, 'index']);
 
+Route::get('/signup', [UserController::class, 'index']);
+Route::post('/signup', [UserController::class, 'store']);
+// Route::post('/login', [UserController::class, 'login']);
 
 // Route::get('/', function () {
 

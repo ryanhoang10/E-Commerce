@@ -1,8 +1,10 @@
 <template>
-    <Header />
+    <Header @showModal="showModal"/>
     <div class="mt-2">
         <img src="/images/summer-home-banner.jpeg" alt="Summer Banner">
     </div>
+
+    <user-modal v-show="modal" />
     
     <ModelExample />
 
@@ -18,8 +20,14 @@ import Footer from '../Shared/Footer.vue';
 import Header from '../Shared/Header.vue';
 import Trending from '../Shared/Trending.vue';
 import ModelExample from '../Shared/Models.vue';
+import UserModal from '../Shared/UserModal.vue';
 
 export default {
+    data() {
+        return {
+            modal: false,
+        }
+    },
     props: {
         products: Array,
         categories_filter: Array,
@@ -32,6 +40,13 @@ export default {
         Trending,
         Footer,
         ModelExample,
+        UserModal,
+    },
+    methods: {
+        showModal(event) {
+            return this.modal = event;
+            // console.log('hit', event)
+        }
     }
 }
 </script>
