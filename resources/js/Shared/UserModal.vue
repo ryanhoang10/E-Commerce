@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="z-10 fixed w-full h-full bg-gray-50 overflow-y-auto">
         <span @click="$emit('hideModal')">x</span>
         <!-- <Link href="/"><img class="mx-auto " src="/images/logo/logo2.png" alt="Logo Image"></Link> -->
         <div class="flex justify-between pt-4">
