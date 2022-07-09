@@ -5,7 +5,7 @@
             <button dusk="filter-cat">{{ filterCat }}</button>
         </div>
 
-        <div v-show="show">
+        <div v-if="show">
             <ul>
                 <li 
                     v-for="filterItem in filterLists"

@@ -21,8 +21,12 @@
                     :key="product.id"
                 >
                     <div>
-                        <img class="" :src="'/images/' + product.image" alt="product.description"> 
-                        <h3 class="text-xs">{{ product.title }}</h3>     
+                        <!-- @todo need to fix -->
+                        <Link :href="'/products/' + product.id">
+                            <img class="" :src="'/images/' + product.image" alt="product.description"> 
+                            <a href="">Quick View</a>
+                            <h3 class="text-xs">{{ product.title }}</h3>     
+                        </Link>
                     </div>
                 </div>    
             </div>                
@@ -38,6 +42,7 @@ import Header from '../Shared/Header.vue';
 import Sort from '../Shared/Sort.vue';
 import Filter from '../Shared/Filter.vue';
 import Footer from '../Shared/Footer.vue';
+import { Link } from '@inertiajs/inertia-vue3';
 
 export default {
     props: {
@@ -52,6 +57,7 @@ export default {
         Sort,
         Filter,
         Footer,
+        Link,
     }
 }
 </script>

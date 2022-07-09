@@ -22,6 +22,8 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/signup', [UserController::class, 'index']);
 Route::post('/signup', [UserController::class, 'store']);
+Route::get('/products/{id}', [ProductController::class, 'show']);
+
 // Route::post('/login', [UserController::class, 'login']);
 
 // Route::get('/', function () {

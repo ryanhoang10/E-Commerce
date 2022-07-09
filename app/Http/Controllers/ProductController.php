@@ -68,4 +68,25 @@ class ProductController extends Controller
             }),
         ]);
     }
+
+    // @todo need to work on
+    public function show(Request $request)
+    {
+        dd($request);
+        
+
+        return Inertia::render('ProductPage', [
+            'product' => Product::query()->where('id', $request->id)->get()->map(function($product) {
+                return [
+                    'id'    => $product->id,
+                    'title' => $product->title,
+                    'image' => $product->image,
+                    'description'   => $product->description,
+                    'price' => $product->unit_price,
+                    'category' => $product->whereHas('category')->get(),
+                    
+                ];
+            }),
+        ]);
+    }
 }
