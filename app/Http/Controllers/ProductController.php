@@ -30,7 +30,7 @@ class ProductController extends Controller
         // return redirect()->route('pizza.index')->with('message', 'Pizza added successfully');
     }
 
-    public function index()
+    public function index(Request $request)
     {
         return Inertia::render('Product', [
             'brands_filter' => Product::select('brand')->distinct()->get()->map(function($brand) {
@@ -57,7 +57,17 @@ class ProductController extends Controller
                     'category_name' => $color->color
                 ];
             }),
-            'products'  => Product::where('active', true)->get()->map(function ($product) {
+            'products'  => Product::where('active', true)->get()->map(function ($product) use ($request) {
+                if ($request) {
+                    if (strpos($request->category, '*') !== false) {
+                        // split the filter by * 
+                        // add the different filters into an array
+                        // loop through array adding new filters
+                    }
+                    // basic filter 
+                    // $product->where()->get();
+                }
+
                 return [
                     'id'    => $product->id,
                     'title' => $product->title,
