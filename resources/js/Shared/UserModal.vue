@@ -1,6 +1,6 @@
 <template>
     <div class="z-10 fixed w-full h-full bg-gray-50 overflow-y-auto">
-        <span @click="$emit('hideModal')">x</span>
+        <span @click="$emit('hideModal', !hideModal)">x</span>
         <!-- <Link href="/"><img class="mx-auto " src="/images/logo/logo2.png" alt="Logo Image"></Link> -->
         <div class="flex justify-between pt-4">
             <form action="post" class="rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6">
@@ -74,6 +74,11 @@
 // import Nav from '../Shared/Nav.vue';
 
 export default {
+    data() {
+        return {
+            hideModal: false,
+        }
+    },
     // components: {
     //     Header,
     //     Link,

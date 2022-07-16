@@ -20348,7 +20348,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     showModal: function showModal(event) {
-      return this.modal = event; // console.log('hit', event)
+      return this.modal = event;
+    },
+    hideModal: function hideModal(event) {
+      return this.modal = !event;
     }
   }
 });
@@ -20476,7 +20479,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     showModal: function showModal(event) {
-      return this.modal = event; // console.log('hit', event)
+      return this.modal = event;
+    },
+    hideModal: function hideModal(event) {
+      return this.modal = !event;
     }
   }
 });
@@ -20620,8 +20626,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
 /* harmony import */ var _Nav_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Nav.vue */ "./resources/js/Shared/Nav.vue");
 /* harmony import */ var _SearchBar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SearchBar.vue */ "./resources/js/Shared/SearchBar.vue");
-/* harmony import */ var _Shared_UserModal_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Shared/UserModal.vue */ "./resources/js/Shared/UserModal.vue");
-
 
 
 
@@ -20634,8 +20638,7 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Link,
     Nav: _Nav_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    SearchBar: _SearchBar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    UserModal: _Shared_UserModal_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    SearchBar: _SearchBar_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   } // methods: {
   //     showModal() {
   //         this.$emit('open-modal')
@@ -20790,11 +20793,17 @@ __webpack_require__.r(__webpack_exports__);
 // import { Link } from '@inertiajs/inertia-vue3';
 // import Header from '../Shared/Header.vue';
 // import Nav from '../Shared/Nav.vue';
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({// components: {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      hideModal: false
+    };
+  } // components: {
   //     Header,
   //     Link,
   //     Nav
   // }
+
 });
 
 /***/ }),
@@ -20837,9 +20846,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onShowModal: $options.showModal
   }, null, 8
   /* PROPS */
-  , ["onShowModal"]), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_user_modal, null, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.modal]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ModelExample), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Trending), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ModelExample), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
+  , ["onShowModal"]), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_user_modal, {
+    onHideModal: $options.hideModal
+  }, null, 8
+  /* PROPS */
+  , ["onHideModal"]), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.modal]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ModelExample), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Trending), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ModelExample), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -20997,9 +21008,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onShowModal: $options.showModal
   }, null, 8
   /* PROPS */
-  , ["onShowModal"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_user_modal, null, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.modal]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Breadcrumbs dummy "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Sort)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Filter, {
+  , ["onShowModal"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_user_modal, {
+    onHideModal: $options.hideModal
+  }, null, 8
+  /* PROPS */
+  , ["onHideModal"]), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.modal]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Breadcrumbs dummy "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Sort)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Filter, {
     categories: $props.categories_filter,
     brands: $props.brands_filter,
     sizes: $props.sizes_filter,
@@ -21685,7 +21698,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVN
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
-      return _ctx.$emit('hideModal');
+      return _ctx.$emit('hideModal', !$data.hideModal);
     })
   }, "x"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <Link href=\"/\"><img class=\"mx-auto \" src=\"/images/logo/logo2.png\" alt=\"Logo Image\"></Link> "), _hoisted_2]);
 }

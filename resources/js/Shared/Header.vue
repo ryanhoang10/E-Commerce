@@ -19,7 +19,6 @@
 import { Link } from '@inertiajs/inertia-vue3';
 import Nav from './Nav.vue';
 import SearchBar from './SearchBar.vue';
-import UserModal from '../Shared/UserModal.vue';
 
 
 export default {
@@ -32,7 +31,6 @@ export default {
         Link,
         Nav,
         SearchBar,
-        UserModal,
     },
     // methods: {
     //     showModal() {

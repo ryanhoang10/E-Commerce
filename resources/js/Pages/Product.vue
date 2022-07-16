@@ -1,6 +1,6 @@
 <template>
     <Header @showModal="showModal"/>
-    <user-modal v-show="modal" />
+    <user-modal v-show="modal" @hideModal="hideModal" />
 
     <div class="flex justify-around p-4">
     <!-- Breadcrumbs dummy -->
@@ -71,7 +71,9 @@ export default {
     methods: {
         showModal(event) {
             return this.modal = event;
-            // console.log('hit', event)
+        },
+        hideModal(event) {
+            return this.modal = !event;
         }
     }
 }

@@ -1,10 +1,10 @@
 <template>
-    <Header @showModal="showModal"/>
+    <Header @showModal="showModal" />
     <div class="mt-2">
         <img src="/images/summer-home-banner.jpeg" alt="Summer Banner">
     </div>
 
-    <user-modal v-show="modal" />
+    <user-modal v-show="modal" @hideModal="hideModal"/>
     
     <ModelExample />
 
@@ -45,7 +45,9 @@ export default {
     methods: {
         showModal(event) {
             return this.modal = event;
-            // console.log('hit', event)
+        },
+        hideModal(event) {
+            return this.modal = !event;
         }
     }
 }
