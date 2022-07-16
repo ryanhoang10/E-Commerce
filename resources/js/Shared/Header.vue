@@ -11,8 +11,6 @@
             </ul>   
         </div>
         
-        <!-- <user-modal v-if="showModal" /> -->
-
     </nav>
     <Nav />
 </template>

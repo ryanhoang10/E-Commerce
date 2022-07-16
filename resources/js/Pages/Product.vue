@@ -1,5 +1,7 @@
 <template>
-    <Header />
+    <Header @showModal="showModal"/>
+    <user-modal v-show="modal" />
+
     <div class="flex justify-around p-4">
     <!-- Breadcrumbs dummy -->
         <h6>Men's Streetwear</h6>
@@ -43,8 +45,14 @@ import Sort from '../Shared/Sort.vue';
 import Filter from '../Shared/Filter.vue';
 import Footer from '../Shared/Footer.vue';
 import { Link } from '@inertiajs/inertia-vue3';
+import UserModal from '../Shared/UserModal.vue';
 
 export default {
+    data() {
+        return {
+            modal: false,
+        }
+    },
     props: {
         products: Array,
         categories_filter: Array,
@@ -58,6 +66,13 @@ export default {
         Filter,
         Footer,
         Link,
+        UserModal
+    },
+    methods: {
+        showModal(event) {
+            return this.modal = event;
+            // console.log('hit', event)
+        }
     }
 }
 </script>
