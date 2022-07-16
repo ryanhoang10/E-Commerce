@@ -20982,34 +20982,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
+  "class": "fixed overflow-hidden left-0 top-0 w-screen h-screen bg-gray-600 opacity-50"
+};
+var _hoisted_2 = {
   "class": "flex justify-around p-4"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Men's Streetwear", -1
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Men's Streetwear", -1
 /* HOISTED */
 );
 
-var _hoisted_3 = {
+var _hoisted_4 = {
   "class": "flex ml-2"
 };
-var _hoisted_4 = {
+var _hoisted_5 = {
   "class": "flex-auto w-32"
 };
-var _hoisted_5 = {
+var _hoisted_6 = {
   "class": "flex-auto"
 };
-var _hoisted_6 = {
+var _hoisted_7 = {
   "class": "grid grid-cols-4 gap-2 px-4"
 };
-var _hoisted_7 = ["src"];
+var _hoisted_8 = ["src"];
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: ""
 }, "Quick View", -1
 /* HOISTED */
 );
 
-var _hoisted_9 = {
+var _hoisted_10 = {
   "class": "text-xs"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -21033,14 +21036,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onHideModal: $options.hideModal
   }, null, 8
   /* PROPS */
-  , ["onHideModal"]), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.modal]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Breadcrumbs dummy "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Sort)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Filter, {
+  , ["onHideModal"]), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.modal]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.modal]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Breadcrumbs dummy "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Sort)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Filter, {
     categories: $props.categories_filter,
     brands: $props.brands_filter,
     sizes: $props.sizes_filter,
     colors: $props.colors_filter
   }, null, 8
   /* PROPS */
-  , ["categories", "brands", "sizes", "colors"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.products, function (product) {
+  , ["categories", "brands", "sizes", "colors"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.products, function (product) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: product.id
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" @todo need to fix "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
@@ -21053,7 +21058,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           alt: "product.description"
         }, null, 8
         /* PROPS */
-        , _hoisted_7), _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(product.title), 1
+        , _hoisted_8), _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(product.title), 1
         /* TEXT */
         )];
       }),
@@ -21748,10 +21753,11 @@ var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 );
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" @todo create two new components for register and login "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return _ctx.$emit('hideModal', !$data.hideModal);
-    })
+    }),
+    "class": "ml-2 cursor-pointer"
   }, "x"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     action: "post",
     onSubmit: _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
@@ -21811,9 +21817,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.confirmPassword]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Address 1\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Address 2\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">                    \n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"City\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"State\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">                    \n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Zipcode\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div> ")]), _hoisted_12], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.confirmPassword]])])]), _hoisted_12], 32
   /* HYDRATE_EVENTS */
-  )])]);
+  )])])], 2112
+  /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
+  );
 }
 
 /***/ }),
