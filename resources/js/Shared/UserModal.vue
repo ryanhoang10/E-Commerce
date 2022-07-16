@@ -1,9 +1,8 @@
 <template>
-    <div class="z-10 fixed w-full h-full bg-gray-50 overflow-y-auto">
+    <div class="z-10 fixed w-full h-modal bg-gray-50 overflow-y-auto">
         <span @click="$emit('hideModal', !hideModal)">x</span>
-        <!-- <Link href="/"><img class="mx-auto " src="/images/logo/logo2.png" alt="Logo Image"></Link> -->
         <div class="flex justify-between pt-4">
-            <form action="post" class="rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6">
+            <form action="post" @submit.prevent="login" class="rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6">
                 <div class="">
                     <div class="mb-6">
                         <input type="text" placeholder="Username" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5">
@@ -17,25 +16,24 @@
                 <div class="pt-3 flex justify-end">
                     <button class="mr-3">Sign In</button>
                 </div>
-                
             </form>
 
-            <form action="post" class="rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6">
+            <form action="post" @submit.prevent="register" class="rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6">
                 <div class="">
                     <div class="mb-6">
-                        <input type="text" placeholder="Username" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5">
+                        <input type="text" v-model="registerForm.username" placeholder="Username" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5">
                     </div>
 
                     <div class="mb-6">
-                        <input type="text" placeholder="Email" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5">                    
+                        <input type="text" v-model="registerForm.email" placeholder="Email" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5">                    
                     </div>
 
                     <div class="mb-6">
-                        <input type="password" placeholder="Password" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5">                    
+                        <input type="password" v-model="registerForm.password" placeholder="Password" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5">                    
                     </div>
 
                     <div class="mb-6">
-                        <input type="password" placeholder="Retype Password" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5">
+                        <input type="password" v-model="registerForm.confirmPassword" placeholder="Retype Password" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5">
                     </div>
 
                     <!-- <div class="mb-6">
@@ -69,6 +67,7 @@
 </template>
 
 <script>
+import { Inertia } from '@inertiajs/inertia'
 // import { Link } from '@inertiajs/inertia-vue3';
 // import Header from '../Shared/Header.vue';
 // import Nav from '../Shared/Nav.vue';
@@ -77,8 +76,32 @@ export default {
     data() {
         return {
             hideModal: false,
+            registerForm: {
+                username: null,
+                password: null,
+                confirmPassword: null,
+                email: null,
+            },
+            loginForm: {
+                username:null,
+                password: null,   
+            }
         }
     },
+    methods: {
+        register() {
+            // console.log(this.registerForm, ' <-- L data')
+            if (this.registerForm.password != this.registerForm.confirmPassword) {
+                // create error component
+                alert('Passwords do not match')
+                return
+            }
+
+            Inertia.post('/signup', this.registerForm)
+
+            console.log('after')
+        }
+    }
     // components: {
     //     Header,
     //     Link,

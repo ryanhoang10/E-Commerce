@@ -20790,14 +20790,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-// import { Link } from '@inertiajs/inertia-vue3';
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+ // import { Link } from '@inertiajs/inertia-vue3';
 // import Header from '../Shared/Header.vue';
 // import Nav from '../Shared/Nav.vue';
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      hideModal: false
+      hideModal: false,
+      registerForm: {
+        username: null,
+        password: null,
+        confirmPassword: null,
+        email: null
+      },
+      loginForm: {
+        username: null,
+        password: null
+      }
     };
+  },
+  methods: {
+    register: function register() {
+      // console.log(this.registerForm, ' <-- L data')
+      if (this.registerForm.password != this.registerForm.confirmPassword) {
+        // create error component
+        alert('Passwords do not match');
+        return;
+      }
+
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.post('/signup', this.registerForm);
+      console.log('after');
+    }
   } // components: {
   //     Header,
   //     Link,
@@ -21690,17 +21715,97 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "z-10 fixed w-full h-full bg-gray-50 overflow-y-auto"
+  "class": "z-10 fixed w-full h-modal bg-gray-50 overflow-y-auto"
+};
+var _hoisted_2 = {
+  "class": "flex justify-between pt-4"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex justify-between pt-4\"><form action=\"post\" class=\"rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6\"><div class=\"\"><div class=\"mb-6\"><input type=\"text\" placeholder=\"Username\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"password\" placeholder=\"Password\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5\"></div></div><div class=\"pt-3 flex justify-end\"><button class=\"mr-3\">Sign In</button></div></form><form action=\"post\" class=\"rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6\"><div class=\"\"><div class=\"mb-6\"><input type=\"text\" placeholder=\"Username\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"text\" placeholder=\"Email\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"password\" placeholder=\"Password\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"password\" placeholder=\"Retype Password\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5\"></div><!-- &lt;div class=&quot;mb-6&quot;&gt;\n                        &lt;input type=&quot;text&quot; placeholder=&quot;Address 1&quot; class=&quot;rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5&quot;&gt;\n                    &lt;/div&gt;\n\n                    &lt;div class=&quot;mb-6&quot;&gt;\n                        &lt;input type=&quot;text&quot; placeholder=&quot;Address 2&quot; class=&quot;rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5&quot;&gt;                    \n                    &lt;/div&gt;\n\n                    &lt;div class=&quot;mb-6&quot;&gt;\n                        &lt;input type=&quot;text&quot; placeholder=&quot;City&quot; class=&quot;rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5&quot;&gt;\n                    &lt;/div&gt;\n\n                    &lt;div class=&quot;mb-6&quot;&gt;\n                        &lt;input type=&quot;text&quot; placeholder=&quot;State&quot; class=&quot;rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5&quot;&gt;                    \n                    &lt;/div&gt;\n\n                    &lt;div class=&quot;mb-6&quot;&gt;\n                        &lt;input type=&quot;text&quot; placeholder=&quot;Zipcode&quot; class=&quot;rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5&quot;&gt;\n                    &lt;/div&gt; --></div><div class=\"pt-3 flex justify-end\"><button class=\"mr-3\">Sign Up</button></div></form></div>", 1);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"\"><div class=\"mb-6\"><input type=\"text\" placeholder=\"Username\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\"></div><div class=\"mb-6\"><input type=\"password\" placeholder=\"Password\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5\"></div></div><div class=\"pt-3 flex justify-end\"><button class=\"mr-3\">Sign In</button></div>", 2);
+
+var _hoisted_5 = [_hoisted_3];
+var _hoisted_6 = {
+  "class": ""
+};
+var _hoisted_7 = {
+  "class": "mb-6"
+};
+var _hoisted_8 = {
+  "class": "mb-6"
+};
+var _hoisted_9 = {
+  "class": "mb-6"
+};
+var _hoisted_10 = {
+  "class": "mb-6"
+};
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "pt-3 flex justify-end"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  "class": "mr-3"
+}, "Sign Up")], -1
+/* HOISTED */
+);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return _ctx.$emit('hideModal', !$data.hideModal);
     })
-  }, "x"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <Link href=\"/\"><img class=\"mx-auto \" src=\"/images/logo/logo2.png\" alt=\"Logo Image\"></Link> "), _hoisted_2]);
+  }, "x"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    action: "post",
+    onSubmit: _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return _ctx.login && _ctx.login.apply(_ctx, arguments);
+    }, ["prevent"])),
+    "class": "rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6"
+  }, _hoisted_5, 32
+  /* HYDRATE_EVENTS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    action: "post",
+    onSubmit: _cache[6] || (_cache[6] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $options.register && $options.register.apply($options, arguments);
+    }, ["prevent"])),
+    "class": "rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+      return $data.registerForm.username = $event;
+    }),
+    placeholder: "Username",
+    "class": "rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.username]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
+      return $data.registerForm.email = $event;
+    }),
+    placeholder: "Email",
+    "class": "rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.email]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "password",
+    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
+      return $data.registerForm.password = $event;
+    }),
+    placeholder: "Password",
+    "class": "rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.password]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "password",
+    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
+      return $data.registerForm.confirmPassword = $event;
+    }),
+    placeholder: "Retype Password",
+    "class": "rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.confirmPassword]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Address 1\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Address 2\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">                    \n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"City\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"State\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">                    \n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Zipcode\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div> ")]), _hoisted_11], 32
+  /* HYDRATE_EVENTS */
+  )])]);
 }
 
 /***/ }),

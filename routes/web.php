@@ -20,7 +20,6 @@ use Inertia\Inertia;
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/signup', [UserController::class, 'index']);
 Route::post('/signup', [UserController::class, 'store']);
 Route::get('/products/{id}', [ProductController::class, 'show']);
 
