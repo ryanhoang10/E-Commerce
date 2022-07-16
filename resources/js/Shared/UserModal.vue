@@ -16,7 +16,6 @@
                 
                 <div class="pt-3 flex justify-end">
                     <button class="mr-3">Sign In</button>
-                    <button class="mr-3">Next</button>   
                 </div>
                 
             </form>
@@ -39,7 +38,7 @@
                         <input type="password" placeholder="Retype Password" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5">
                     </div>
 
-                    <div class="mb-6">
+                    <!-- <div class="mb-6">
                         <input type="text" placeholder="Address 1" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5">
                     </div>
 
@@ -57,12 +56,11 @@
 
                     <div class="mb-6">
                         <input type="text" placeholder="Zipcode" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5">
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="pt-3 flex justify-end">
-                    <button class="mr-3">Sign In</button>
-                    <button class="mr-3">Next</button>   
+                    <button class="mr-3">Sign Up</button>
                 </div>
                 
             </form>
