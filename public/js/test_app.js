@@ -20852,6 +20852,9 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
+var _hoisted_2 = {
+  "class": "fixed overflow-hidden left-0 top-0 w-screen h-screen bg-gray-600 opacity-50"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Header = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Header");
 
@@ -20871,7 +20874,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onHideModal: $options.hideModal
   }, null, 8
   /* PROPS */
-  , ["onHideModal"]), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.modal]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ModelExample), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Trending), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ModelExample), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
+  , ["onHideModal"]), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.modal]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.modal]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ModelExample), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Trending), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ModelExample), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
   /* STABLE_FRAGMENT */
   );
 }

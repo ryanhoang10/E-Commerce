@@ -5,7 +5,8 @@
     </div>
 
     <user-modal v-show="modal" @hideModal="hideModal"/>
-    
+    <div v-show="modal" class="fixed overflow-hidden left-0 top-0 w-screen h-screen bg-gray-600 opacity-50"></div>
+
     <ModelExample />
 
     <Trending />
