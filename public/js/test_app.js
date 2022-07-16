@@ -20800,7 +20800,9 @@ __webpack_require__.r(__webpack_exports__);
     return {
       hideModal: false,
       registerForm: {
-        username: null,
+        firstName: null,
+        lastName: null,
+        name: null,
         password: null,
         confirmPassword: null,
         email: null
@@ -20813,15 +20815,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     register: function register() {
-      // console.log(this.registerForm, ' <-- L data')
-      if (this.registerForm.password != this.registerForm.confirmPassword) {
-        // create error component
-        alert('Passwords do not match');
-        return;
-      }
-
+      // probably can clean this
+      this.registerForm.name = this.registerForm.firstName + ' ' + this.registerForm.lastName;
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.post('/signup', this.registerForm);
-      console.log('after');
     }
   } // components: {
   //     Header,
@@ -21739,8 +21735,11 @@ var _hoisted_9 = {
 var _hoisted_10 = {
   "class": "mb-6"
 };
+var _hoisted_11 = {
+  "class": "mb-6"
+};
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "pt-3 flex justify-end"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   "class": "mr-3"
@@ -21763,47 +21762,56 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* HYDRATE_EVENTS */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     action: "post",
-    onSubmit: _cache[6] || (_cache[6] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+    onSubmit: _cache[7] || (_cache[7] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.register && $options.register.apply($options, arguments);
     }, ["prevent"])),
     "class": "rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6"
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
-      return $data.registerForm.username = $event;
+      return $data.registerForm.firstName = $event;
     }),
-    placeholder: "Username",
+    placeholder: "First Name",
     "class": "rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.username]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.firstName]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
+      return $data.registerForm.lastName = $event;
+    }),
+    placeholder: "Last Name",
+    "class": "rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.lastName]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
       return $data.registerForm.email = $event;
     }),
     placeholder: "Email",
     "class": "rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.email]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.email]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
-    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
+    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
       return $data.registerForm.password = $event;
     }),
     placeholder: "Password",
     "class": "rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.password]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.password]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
-    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
+    "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
       return $data.registerForm.confirmPassword = $event;
     }),
     placeholder: "Retype Password",
     "class": "rounded-none rounded-lg bg-gray-50 border border-gray-300 block w-full p-1.5"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.confirmPassword]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Address 1\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Address 2\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">                    \n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"City\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"State\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">                    \n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Zipcode\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div> ")]), _hoisted_11], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.registerForm.confirmPassword]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Address 1\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Address 2\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">                    \n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"City\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"State\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">                    \n                    </div>\n\n                    <div class=\"mb-6\">\n                        <input type=\"text\" placeholder=\"Zipcode\" class=\"rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5\">\n                    </div> ")]), _hoisted_12], 32
   /* HYDRATE_EVENTS */
   )])]);
 }

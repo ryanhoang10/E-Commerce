@@ -21,7 +21,11 @@
             <form action="post" @submit.prevent="register" class="rounded-sm w-full max-w-sm mx-auto bg-zinc-200 px-4 pb-4 pt-6">
                 <div class="">
                     <div class="mb-6">
-                        <input type="text" v-model="registerForm.username" placeholder="Username" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5">
+                        <input type="text" v-model="registerForm.firstName" placeholder="First Name" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5">
+                    </div>
+
+                    <div class="mb-6">
+                        <input type="text" v-model="registerForm.lastName" placeholder="Last Name" class="rounded-none rounded-lg bg-gray-50 border border-gray-300 text-gray-900 block w-full p-1.5">
                     </div>
 
                     <div class="mb-6">
@@ -77,7 +81,9 @@ export default {
         return {
             hideModal: false,
             registerForm: {
-                username: null,
+                firstName: null,
+                lastName: null,
+                name: null,
                 password: null,
                 confirmPassword: null,
                 email: null,
@@ -90,16 +96,11 @@ export default {
     },
     methods: {
         register() {
-            // console.log(this.registerForm, ' <-- L data')
-            if (this.registerForm.password != this.registerForm.confirmPassword) {
-                // create error component
-                alert('Passwords do not match')
-                return
-            }
+
+            // probably can clean this
+            this.registerForm.name = this.registerForm.firstName + ' ' + this.registerForm.lastName;
 
             Inertia.post('/signup', this.registerForm)
-
-            console.log('after')
         }
     }
     // components: {
