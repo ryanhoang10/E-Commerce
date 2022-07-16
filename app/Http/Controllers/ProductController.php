@@ -58,23 +58,43 @@ class ProductController extends Controller
                 ];
             }),
             'products'  => Product::where('active', true)->get()->map(function ($product) use ($request) {
-                if ($request) {
-                    if (strpos($request->category, '*') !== false) {
-                        // split the filter by * 
-                        // add the different filters into an array
-                        // loop through array adding new filters
-                    }
-                    // basic filter 
-                    // $product->where()->get();
-                }
+                // if ($request->cat) {
+                //     if (strpos($request->category, '*') !== false) {
+                //         // split the filter by * 
+                //         // add the different filters into an array
+                //         // loop through array adding new filters
+                //     }
+                //     // basic filter 
+                //     // $product->whereHas('category', function($cat) use ($request) {
+                //     //     $cat->where('category_name', $request->cat)->get();
+                //     // });
+
+                //     dd($product);
+                //     return $product->product_id > 1;
+                //     // $product->filter('category_id', Category::where('category_name', $request->cat)->get())->get();
+                // }
 
                 return [
-                    'id'    => $product->id,
+                    'product_id' => $product->product_id,
+                    'category_id' => $product->category_id,
                     'title' => $product->title,
                     'image' => $product->image,
-                    'description'   => $product->description,
+                    'description' => $product->description,
                     'price' => $product->unit_price,
                 ];
+            })->filter(function($product) use ($request) {
+                if ($request->cat) {
+                    if (strpos($request->cat, '*') !== false) {
+
+                    }
+
+                    $category = Category::where('category_name', ucfirst($request->cat))->first();
+                    
+
+                    return $product['category_id'] == $category->id;
+                }
+
+                return $product;
             }),
         ]);
     }

@@ -20,11 +20,11 @@
             <div class="grid grid-cols-4 gap-2 px-4">
                 <div 
                     v-for="product in products"
-                    :key="product.id"
+                    :key="product.product_id"
                 >
                     <div>
                         <!-- @todo need to fix -->
-                        <Link :href="'/products/' + product.id">
+                        <Link :href="'/products/' + product.product_id">
                             <img class="" :src="'/images/' + product.image" alt="product.description"> 
                             <a href="">Quick View</a>
                             <h3 class="text-xs">{{ product.title }}</h3>     
